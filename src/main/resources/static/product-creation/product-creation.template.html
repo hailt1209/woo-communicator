@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row pt-5">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    Create New Product
+                </div>
+                <div class="card-body">
+                    <form novalidate ng-submit="form.$valid && submitNewProduct()" name="form">
+                        <div class="form-group">
+                            <label for="name">Product name</label>
+                            <input class="form-control" id="name" name="name" ng-model="newProduct.name" required>
+                            <span style="color:red" ng-show="form.$submitted || form.name.$touched">
+                                  <span ng-show="form.name.$error.required">Product name is required.</span>
+                                </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type</label>
+                            <select class="form-control" name="type" id="type"
+                                    ng-options="item for item in types "
+                                    ng-model="newProduct.type" required></select>
+                            <span style="color:red" ng-show="form.$submitted || form.type.$touched">
+                                  <span ng-show="form.type.$error.required">Product type is required.</span>
+                                </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="regular_price">Regular Price</label>
+                            <input class="form-control" type="number" id="regular_price" name="regular_price"
+                                   ng-model="newProduct.regularPrice" required>
+                            <span style="color:red" ng-show="form.$submitted || form.type.$touched">
+                                  <span ng-show="form.regular_price.$error.required">Regular price is required.</span>
+                                </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input class="form-control" id="description" ng-model="newProduct.description">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button class="btn btn-primary" ng-click="reset()">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm"></div>
+    </div>
+</div>
+

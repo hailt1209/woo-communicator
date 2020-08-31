@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <div class="row pt-5 px-5">
+                <a href="#!/products/new" class="btn btn-info" role="button">Create new product</a>
+            </div>
+            <div class="row pt-3 px-5">
+                <div class="card">
+                    <div class="card-header">
+                        Product List
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-condensed table-responsive">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Date Created</th>
+                                <th scope="col">Date Modified</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Featured</th>
+                                <th scope="col">Catalog Visibility</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Regular Price</th>
+                                <th scope="col">Sale Price</th>
+                                <!--                        <th scope="col">Date On Sale From</th>-->
+                                <!--                        <th scope="col">Date On Sale To</th>-->
+                                <th scope="col">On Sale</th>
+                                <th scope="col">Purchasable</th>
+                                <th scope="col">Total Sales</th>
+                                <th scope="col">Virtual</th>
+                                <th scope="col">Tax Status</th>
+                                <th scope="col">Tax Class</th>
+                                <th scope="col">Stock Quantity</th>
+                                <th scope="col">Stock Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="product in $ctrl.products">
+                                <th scope="row">{{$index}}</th>
+                                <td><a href="{{product.permalink}}">{{product.name}}</a></td>
+                                <td>{{product.date_created}}</td>
+                                <td>{{product.date_modified}}</td>
+                                <td>{{product.type}}</td>
+                                <td>{{product.status}}</td>
+                                <td>{{product.featured}}</td>
+                                <td>{{product.catalog_visibility}}</td>
+                                <td>{{product.description}}</td>
+                                <td>{{product.price}}</td>
+                                <td>{{product.regular_price}}</td>
+                                <td>{{product.sale_price}}</td>
+                                <!--                        <td>{{product.date_on_sale_from}}</td>-->
+                                <!--                        <td>{{product.date_on_sale_to}}</td>-->
+                                <td>{{product.on_sale}}</td>
+                                <td>{{product.purchasable}}</td>
+                                <td>{{product.total_sales}}</td>
+                                <td>{{product.virtual}}</td>
+                                <td>{{product.tax_status}}</td>
+                                <td>{{product.tax_class}}</td>
+                                <td>{{product.stock_quantity}}</td>
+                                <td>{{product.stock_status}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm"></div>
+    </div>
+</div>
